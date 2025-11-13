@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ARROBA Soluções Digitais | Seu Próximo Nível Digital</title>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    
+    <style>
+        :root {
+            --cor-destaque: #00BFFF; /* Azul Elétrico - Inovação/Tecnologia */
+            --cor-primaria: #000000; /* Preto - Sofisticação */
+            --cor-secundaria: #ffffff; /* Branco - Clareza */
+            --cor-texto: #333333;
+        }
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: var(--cor-secundaria);
+            color: var(--cor-texto);
+            scroll-behavior: smooth;
+        }
+        h1, h2, h3 {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+       /* Navbar Sofisticada */
+        .navbar-custom {
+            background-color: var(--cor-primaria);
+            border-bottom: 2px solid var(--cor-destaque); /* Linha de destaque */
+        }
+        .navbar-custom .nav-link {
+            color: var(--cor-secundaria);
+            transition: color 0.3s ease;
+        }
+        .navbar-custom .nav-link:hover {
+            color: var(--cor-destaque);
+        }
+
+        /* Estilo da Logo */
+        .navbar-logo {
+            max-height: 40px; /* Define o tamanho da sua logo no menu */
+            width: auto;
+        }
+
+        /* Botões */
+        .btn-arroba {
+            background-color: var(--cor-destaque);
+            color: var(--cor-primaria);
+            font-weight: bold;
+            padding: 12px 25px;
+            border-radius: 0; /* Design Limpo/Geométrico */
+            box-shadow: 3px 3px 0px var(--cor-primaria); 
+            transition: all 0.3s ease;
+            border: 2px solid var(--cor-destaque);
+        }
+        .btn-arroba:hover {
+            background-color: var(--cor-primaria);
+            color: var(--cor-secundaria);
+            border: 2px solid var(--cor-destaque);
+            box-shadow: 3px 3px 0px var(--cor-destaque);
+        }
+
+        /* Seção Hero/Destaque */
+        .hero-section {
+            background-color: var(--cor-primaria);
+            color: var(--cor-secundaria);
+            padding: 100px 0;
+            border-bottom: 5px solid var(--cor-destaque);
+        }
+        .text-destaque {
+            color: var(--cor-destaque);
+        }
+
+        /* Seção de Conteúdo */
+        .section-content {
+            padding: 80px 0;
+        }
+        .card-solucao {
+            border: none;
+            border-bottom: 4px solid var(--cor-primaria);
+            transition: border-bottom 0.3s ease;
+            cursor: pointer;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+        }
+        .card-solucao:hover {
+            border-bottom: 4px solid var(--cor-destaque);
+            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Ícones para Destaque */
+        .icon-destaque {
+            color: var(--cor-destaque);
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
+        <div class="container">
+           <a class="navbar-brand" href="#">
+                <img src="logo.png" alt="ARROBA Soluções Digitais Logo" class="navbar-logo">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#solucoes">Soluções</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#quem-somos">Quem Somos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#formulario">Diagnóstico GRÁTIS</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <header class="hero-section text-center">
+        <div class="container">
+            <h1 class="display-3 mb-4 fw-bolder">
+                Seu Negócio Precisa de um Plano. <br> Não de Sorte.
+            </h1>
+            <p class="lead mb-5">
+                <span class="fw-bold">Estrategista Inspirador:</span> Se você está começando ou cansado de resultados ruins, nós temos o sistema de aquisição que funciona. Pare de chutar e comece a escalar.
+            </p>
+            <a href="#formulario" class="btn btn-lg btn-arroba shadow-lg">
+                QUERO UM DIAGNÓSTICO ESTRATÉGICO 🎯
+            </a>
+        </div>
+    </header>
+
+    <section id="solucoes" class="section-content bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5">Nossas Soluções Digitais (Onde o Design Vira Lucro)</h2>
+            <div class="row">
+                <div class="col-md-4 mb-4">
+                    <div class="card card-solucao p-4 h-100 text-center">
+                        <i class="fas fa-bullseye icon-destaque"></i>
+                        <h4 class="card-title fw-bold">Tráfego Pago: FLUXO CONTÍNUO</h4>
+                        <p class="card-text">Criamos a máquina de clientes para você. Sem "boosts", apenas estratégia de Meta Ads e Google Ads focada no seu ROI. <span class="fw-bold">Profissionalismo Ágil.</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card card-solucao p-4 h-100 text-center">
+                        <i class="fas fa-rocket icon-destaque"></i>
+                        <h4 class="card-title fw-bold">Gestão de Mídias Sociais</h4>
+                        <p class="card-text">Transformamos seu feed em uma fonte de autoridade e vendas. Conteúdo estratégico que engaja <span class="fst-italic">e</span> converte. <span class="fw-bold">Otimismo Estruturado.</span></p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4">
+                    <div class="card card-solucao p-4 h-100 text-center">
+                        <i class="fas fa-paint-brush icon-destaque"></i>
+                        <h4 class="card-title fw-bold">Identidade & Branding</h4>
+                        <p class="card-text">Sua credibilidade é visual. Design sofisticado, tipografia e cores que posicionam sua marca no alto valor. <span class="fw-bold">Estrategista Inspirador.</span></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="quem-somos" class="section-content bg-white">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-4 mb-lg-0">
+                    <h2 class="mb-4">ARROBA. Seu Próximo Nível Digital.</h2>
+                    <p>Acreditamos que toda marca merece um <span class="fw-bold">plano de voo digital</span> claro. Somos uma agência que une a ciência do <span class="fst-italic">data-driven</span> com a arte do design que vende.</p>
+                    <p class="lead fw-bold">
+                        Não somos só mais uma agência. Somos seus Estrategistas. Nosso foco é na evolução contínua do seu negócio, seja você um iniciante promissor ou um empreendedor escalável.
+                    </p>
+                </div>
+                <div class="col-lg-6 text-center">
+                    <i class="fas fa-chart-line icon-destaque" style="font-size: 6rem;"></i>
+                    <p class="mt-3 text-muted">Soluções baseadas em dados, não em achismos.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="formulario" class="section-content" style="background-color: #f7f7f7;">
+        <div class="container">
+            <h2 class="text-center mb-5">Transforme Dúvida em Ação. Diagnóstico GRÁTIS!</h2>
+            <div class="row justify-content-center">
+                <div class="col-lg-8">
+                    <p class="text-center lead mb-4 fw-bold">
+                        Se você precisa começar certo ou corrigir a rota: Preencha agora e receba nossa análise técnica sem custo.
+                    </p>
+                    
+                    <form action="https://formspree.io/f/xwpapbjr" method="POST">
+                        <div class="mb-3">
+                            <label for="nome" class="form-label fw-bold">Seu Nome e Sobrenome:</label>
+                            <input type="text" class="form-control" name="Nome" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label fw-bold">Seu Melhor E-mail:</label>
+                            <input type="email" class="form-control" name="Email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="whatsapp" class="form-label fw-bold">Whatsapp (Para agendamento):</label>
+                            <input type="telefone" class="form-control" name="Whatsapp" required>
+                        </div>
+                        <div class="mb-4">
+                            <label for="desafio" class="form-label fw-bold">Qual seu Principal Desafio (Ex: Começar a anunciar, Melhorar o ROI, Ter um logo profissional...)?</label>
+                            <input type="text" class="form-control" name="Desafio" required>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-lg btn-block btn-arroba w-100">
+                            QUERO A ANÁLISE DO ESTRATEGISTA 🚀
+                        </button>
+                    </form>
+                    <p class="text-center small mt-3 text-muted">Fique tranquilo(a): Suas informações são confidenciais. Usaremos o Whatsapp para agendar sua sessão.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <footer class="py-4 mt-5" style="background-color: var(--cor-primaria); color: var(--cor-secundaria);">
+        <div class="container text-center">
+            <small>&copy; 2025 ARROBA Soluções Digitais. | <span class="text-destaque">Seu Próximo Nível Digital.</span></small>
+            <div class="mt-3">
+                <a href="https://instagram.com/arrobasdigital" class="text-decoration-none mx-3 text-destaque" target="_blank"><i class="fab fa-instagram"></i> @arrobasdigital</a>
+                <a href="https://wa.me/553172266117" class="text-decoration-none mx-3 text-destaque" target="_blank"><i class="fab fa-whatsapp"></i> +55 31 7226-6117</a>
+                </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
