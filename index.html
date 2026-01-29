@@ -3,11 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ARROBA Soluções Digitais | Seu Próximo Nível Digital</title>
+    <title>ARROBA Soluções Digitais | Estrutura, Dados e Escala</title>
 
     <link rel="icon" type="image/png" href="logo2.png">
 
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     
@@ -16,239 +16,296 @@
             --cor-destaque: #00BFFF;
             --cor-primaria: #000000;
             --cor-secundaria: #ffffff;
-            --cor-texto: #333333;
+            --cor-dark-grey: #121212;
             --cor-whatsapp: #25d366;
         }
         body {
             font-family: 'Inter', sans-serif;
             background-color: var(--cor-secundaria);
-            color: var(--cor-texto);
+            color: var(--cor-primaria);
             scroll-behavior: smooth;
         }
-        h1, h2, h3 {
+        h1, h2, h3, .font-montserrat {
             font-family: 'Montserrat', sans-serif;
-            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: -1px;
         }
+        
         .navbar-custom {
-            background-color: var(--cor-primaria);
+            background-color: rgba(0,0,0,0.98);
+            backdrop-filter: blur(15px);
             border-bottom: 2px solid var(--cor-destaque);
+            padding: 15px 0;
         }
-        .navbar-custom .nav-link {
-            color: var(--cor-secundaria);
-            transition: color 0.3s ease;
-        }
-        .navbar-custom .nav-link:hover {
-            color: var(--cor-destaque);
-        }
-        .navbar-logo {
-            max-height: 40px;
-            width: auto;
-        }
-        .btn-arroba {
-            background-color: var(--cor-destaque);
-            color: var(--cor-primaria);
-            font-weight: bold;
-            padding: 12px 25px;
-            border-radius: 0;
-            box-shadow: 3px 3px 0px var(--cor-primaria); 
-            transition: all 0.3s ease;
-            border: 2px solid var(--cor-destaque);
-        }
-        .btn-arroba:hover {
-            background-color: var(--cor-primaria);
-            color: var(--cor-secundaria);
-            border: 2px solid var(--cor-destaque);
-            box-shadow: 3px 3px 0px var(--cor-destaque);
-        }
+        .navbar-logo { max-height: 45px; }
+
         .hero-section {
-            background-color: var(--cor-primaria);
+            background: linear-gradient(rgba(0,0,0,0.8), rgba(0,0,0,0.8)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?q=80&w=2070&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
             color: var(--cor-secundaria);
-            padding: 100px 0;
-            border-bottom: 5px solid var(--cor-destaque);
+            padding: 160px 0 100px;
+            border-bottom: 10px solid var(--cor-destaque);
         }
-        .section-content {
-            padding: 80px 0;
-        }
-        .card-solucao {
-            border: none;
-            border-bottom: 4px solid var(--cor-primaria);
-            transition: border-bottom 0.3s ease;
-            cursor: pointer;
-            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
-        }
-        .card-solucao:hover {
-            border-bottom: 4px solid var(--cor-destaque);
-            box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
-        }
-        .icon-destaque {
-            color: var(--cor-destaque);
-            font-size: 2.5rem;
-            margin-bottom: 15px;
-        }
-
-        /* --- BOTÃO WHATSAPP MAIOR COM NOTIFICAÇÃO --- */
-        .whatsapp-container {
-            position: fixed;
-            bottom: 40px;
-            right: 40px;
-            z-index: 1000;
-        }
-
-        .whatsapp-float {
-            width: 70px; /* Aumentado */
-            height: 70px; /* Aumentado */
-            background-color: var(--cor-whatsapp);
-            color: #FFF;
+        .badge-online {
+            background: rgba(37, 211, 102, 0.15);
+            color: #25d366;
+            padding: 8px 20px;
             border-radius: 50px;
-            text-align: center;
-            font-size: 35px; /* Ícone maior */
-            box-shadow: 0px 8px 20px rgba(0,0,0,0.3);
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-decoration: none;
-            transition: all 0.3s ease;
-            position: relative;
-        }
-
-        /* Notificação em Vermelho */
-        .whatsapp-badge {
-            position: absolute;
-            top: 0;
-            right: 0;
-            width: 22px;
-            height: 22px;
-            background-color: #ff0000;
-            color: white;
-            border-radius: 50%;
-            font-size: 14px;
             font-weight: bold;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid #fff;
-            box-shadow: 0px 2px 5px rgba(0,0,0,0.2);
+            display: inline-block;
+            margin-bottom: 25px;
+            border: 1px solid rgba(37, 211, 102, 0.3);
+        }
+        .dot { height: 10px; width: 10px; background-color: #25d366; border-radius: 50%; display: inline-block; margin-right: 8px; animation: pulse 1.5s infinite; }
+
+        .card-servico {
+            background: #fff;
+            border: 1px solid #e0e0e0;
+            border-radius: 20px;
+            padding: 40px 30px;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            text-decoration: none;
+            color: inherit;
+            display: block;
+            height: 100%;
+        }
+        .card-servico:hover {
+            transform: translateY(-12px);
+            border-color: var(--cor-destaque);
+            box-shadow: 0 20px 40px rgba(0,191,255,0.15);
+        }
+        .card-servico i { font-size: 3rem; color: var(--cor-destaque); margin-bottom: 25px; }
+        .btn-card {
+            margin-top: 20px;
+            background: var(--cor-primaria);
+            color: #fff;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 8px;
+            font-weight: 800;
+            width: 100%;
+            transition: 0.3s;
+        }
+        .card-servico:hover .btn-card { background: var(--cor-destaque); color: #000; }
+
+        .resultados-paineis { background: var(--cor-dark-grey); color: #fff; padding: 100px 0; }
+        .stat-number { font-size: 3.5rem; font-weight: 900; color: var(--cor-destaque); line-height: 1; }
+
+        .manifesto-box {
+            padding: 60px;
+            background: #000;
+            color: #fff;
+            border-radius: 30px;
+            box-shadow: 30px 30px 0px var(--cor-destaque);
         }
 
-        .whatsapp-float:hover {
-            background-color: #128c7e;
-            color: #FFF;
-            transform: scale(1.1);
-        }
+        .faq-section { padding: 100px 0; background: #f9f9f9; }
+        .accordion-item { border: none; margin-bottom: 15px; border-radius: 12px !important; overflow: hidden; box-shadow: 0 5px 15px rgba(0,0,0,0.05); }
+        .accordion-button:not(.collapsed) { background-color: var(--cor-destaque); color: #000; }
 
-        /* Animação para chamar atenção */
-        @keyframes pulse-red {
-            0% { transform: scale(1); }
-            50% { transform: scale(1.2); }
-            100% { transform: scale(1); }
+        .whatsapp-container { position: fixed; bottom: 35px; right: 35px; z-index: 1000; }
+        .whatsapp-float {
+            width: 75px; height: 75px; background-color: var(--cor-whatsapp);
+            color: #FFF; border-radius: 50%; display: flex; align-items: center;
+            justify-content: center; font-size: 38px; box-shadow: 0px 10px 25px rgba(0,0,0,0.3);
+            text-decoration: none; position: relative;
         }
         .whatsapp-badge {
-            animation: pulse-red 2s infinite ease-in-out;
+            position: absolute; top: 0; right: 0; width: 26px; height: 26px;
+            background: #ff0000; color: #fff; border-radius: 50%;
+            font-size: 13px; font-weight: bold; display: flex; align-items: center; justify-content: center;
+            border: 2px solid #fff; animation: pulse-red 2s infinite;
         }
 
-        @media screen and (max-width: 767px) {
-            .whatsapp-container { bottom: 20px; right: 20px; }
-            .whatsapp-float { width: 60px; height: 60px; font-size: 30px; }
-        }
+        @keyframes pulse { 0% { opacity: 1; } 50% { opacity: 0.2; } 100% { opacity: 1; } }
+        @keyframes pulse-red { 0% { transform: scale(1); } 50% { transform: scale(1.2); } 100% { transform: scale(1); } }
     </style>
 </head>
 <body>
 
     <nav class="navbar navbar-expand-lg navbar-dark navbar-custom sticky-top">
         <div class="container">
-           <a class="navbar-brand" href="#">
-                <img src="logo.png" alt="ARROBA Soluções Digitais Logo" class="navbar-logo">
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#solucoes">Soluções</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#quem-somos">Quem Somos</a></li>
-                     </ul>
+            <a class="navbar-brand" href="#"><img src="logo.png" alt="ARROBA Logo" class="navbar-logo"></a>
+            <div class="ms-auto d-none d-lg-block">
+                <span class="text-white small fw-bold"><span class="dot"></span> RESPONDEMOS AGORA EM TEMPO REAL</span>
             </div>
         </div>
     </nav>
 
     <header class="hero-section text-center">
         <div class="container">
-            <h1 class="display-3 mb-4 fw-bolder">Seu Negócio Precisa de um Plano. <br> Não de Sorte.</h1>
-            <p class="lead mb-5">Pare de chutar e comece a escalar.</p>
-            <a href="#formulario" class="btn btn-lg btn-arroba shadow-lg">QUERO UM DIAGNÓSTICO ESTRATÉGICO 🎯</a>
+            <div class="badge-online"><span class="dot"></span> TIME DE PERFORMANCE ATIVO</div>
+            <h1 class="display-1 mb-3 fw-bolder">O SEU NEGÓCIO PRECISA DE <br><span style="color: var(--cor-destaque);">ESTRUTURA, NÃO SORTE.</span></h1>
+            <p class="lead mb-5 opacity-75 fw-bold">Atendemos um número limitado de marcas por mês para garantir escala real.</p>
+            <a href="#solucoes" class="btn btn-lg btn-card py-3 px-5 d-inline-block w-auto">QUERO MEU PLANO DE ESCALA</a>
         </div>
     </header>
 
-    <section id="solucoes" class="section-content bg-light">
+    <section class="resultados-paineis text-center">
         <div class="container">
-            <h2 class="text-center mb-5">Nossas Soluções Digitais</h2>
-            <div class="row">
-                <div class="col-md-4 mb-4">
-                    <div class="card card-solucao p-4 h-100 text-center">
-                        <i class="fas fa-bullseye icon-destaque"></i>
-                        <h4 class="card-title fw-bold">Tráfego Pago</h4>
-                        <p class="card-text">Máquina de clientes com estratégia de Meta e Google Ads.</p>
-                    </div>
+            <h2 class="mb-5 font-montserrat">Impacto ARROBA em 2025</h2>
+            <div class="row g-5">
+                <div class="col-md-4">
+                    <div class="stat-number">+102K</div>
+                    <p class="text-uppercase fw-bold opacity-75">Alcance Gerado</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card card-solucao p-4 h-100 text-center">
-                        <i class="fas fa-rocket icon-destaque"></i>
-                        <h4 class="card-title fw-bold">Gestão de Mídias</h4>
-                        <p class="card-text">Transformamos seu feed em autoridade e vendas.</p>
-                    </div>
+                <div class="col-md-4">
+                    <div class="stat-number">+202K</div>
+                    <p class="text-uppercase fw-bold opacity-75">Impressões de Marca</p>
                 </div>
-                <div class="col-md-4 mb-4">
-                    <div class="card card-solucao p-4 h-100 text-center">
-                        <i class="fas fa-paint-brush icon-destaque"></i>
-                        <h4 class="card-title fw-bold">Design & Branding</h4>
-                        <p class="card-text">Design sofisticado que posiciona sua marca no alto valor.</p>
+                <div class="col-md-4">
+                    <div class="stat-number">30K</div>
+                    <p class="text-uppercase fw-bold opacity-75">Views em Único Post</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="solucoes" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 fw-900">SOLUÇÕES DE ALTA PERFORMANCE</h2>
+            <div class="row g-4">
+                <div class="col-md-3">
+                    <a href="https://wa.me/553172266117?text=Olá!%20Quero%20saber%20mais%20sobre%20o%20serviço%20de%20TRÁFEGO%20PAGO." target="_blank" class="card-servico text-center">
+                        <i class="fas fa-crosshairs"></i>
+                        <h4 class="fw-bold">Tráfego Pago</h4>
+                        <p class="small">Anúncios estratégicos no Meta e Google Ads para vender todo dia.</p>
+                        <button class="btn-card">SABER MAIS</button>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://wa.me/553172266117?text=Olá!%20Tenho%20interesse%20na%20GESTÃO%20DE%20MÍDIAS%20SOCIAIS." target="_blank" class="card-servico text-center">
+                        <i class="fas fa-bolt"></i>
+                        <h4 class="fw-bold">Mídia Social</h4>
+                        <p class="small">Transformamos seu feed em uma vitrine de autoridade e desejo.</p>
+                        <button class="btn-card">SABER MAIS</button>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://wa.me/553172266117?text=Olá!%20Gostaria%20de%20informações%20sobre%20os%20PACKS%20DE%20POSTAGENS." target="_blank" class="card-servico text-center">
+                        <i class="fas fa-gem"></i>
+                        <h4 class="fw-bold">Pack de Posts</h4>
+                        <p class="small">Artes prontas e estratégicas para sua marca nunca parar de postar.</p>
+                        <button class="btn-card">SABER MAIS</button>
+                    </a>
+                </div>
+                <div class="col-md-3">
+                    <a href="https://wa.me/553172266117?text=Olá!%20Quero%20falar%20sobre%20OUTROS%20SERVIÇOS%20digitais." target="_blank" class="card-servico text-center">
+                        <i class="fas fa-code"></i>
+                        <h4 class="fw-bold">Sites & Outros</h4>
+                        <p class="small">Landing Pages, Google Meu Negócio e soluções sob medida.</p>
+                        <button class="btn-card">SABER MAIS</button>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="py-5 bg-white">
+        <div class="container">
+            <div class="manifesto-box">
+                <div class="row align-items-center">
+                    <div class="col-lg-7">
+                        <h2 class="display-4 fw-900 mb-4" style="color: var(--cor-destaque);">MANIFESTO ARROBA</h2>
+                        <p class="lead fw-bold">Não vendemos "posts". Construímos ativos digitais.</p>
+                        <p class="opacity-75">No mercado digital, muitos prometem milagres, mas poucos entregam <strong>estrutura</strong>. A ARROBA Soluções Digitais nasceu para quem cansou de jogar dinheiro fora com amadorismo.</p>
+                        <p class="opacity-75">Usamos dados para decidir, criatividade para encantar e tecnologia para escalar. Se busca um parceiro que trata seu negócio com seriedade, você encontrou sua agência.</p>
+                    </div>
+                    <div class="col-lg-5 d-none d-lg-block">
+                        <img src="https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?q=80&w=2070&auto=format&fit=crop" class="img-fluid rounded-4 shadow" alt="Tecnologia">
                     </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <section id="formulario" class="section-content" style="background-color: #f7f7f7;">
+    <section class="faq-section">
         <div class="container">
-            <h2 class="text-center mb-5">Transforme Dúvida em Ação.</h2>
+            <h2 class="text-center mb-5 fw-900">FAQ ESTRATÉGICO</h2>
             <div class="row justify-content-center">
                 <div class="col-lg-8">
-                    <form action="https://formspree.io/f/xwpapbjr" method="POST">
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Nome:</label>
-                            <input type="text" class="form-control" name="Nome" required>
+                    <div class="accordion" id="faqArroba">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q1">
+                                    Qual a diferença entre o botão "Turbinar" e o Tráfego Pago Profissional?
+                                </button>
+                            </h2>
+                            <div id="q1" class="accordion-collapse collapse show" data-bs-parent="#faqArroba">
+                                <div class="accordion-body">
+                                    O botão "Turbinar" gera alcance rápido, mas sem inteligência. O <strong>Tráfego Pago Profissional</strong> usa o Gerenciador de Anúncios com Pixel e públicos personalizados para garantir que seu anúncio apareça para quem realmente tem chance de comprar.
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-3">
-                            <label class="form-label fw-bold">Whatsapp:</label>
-                            <input type="telefone" class="form-control" name="Whatsapp" required>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q2">
+                                    Por que investir em Gestão de Mídias se eu mesmo posso postar?
+                                </button>
+                            </h2>
+                            <div id="q2" class="accordion-collapse collapse" data-bs-parent="#faqArroba">
+                                <div class="accordion-body">
+                                    Gerir mídias é sobre <strong>Estratégia e Autoridade</strong>. Um gestor profissional entende de algoritmos, design e escrita persuasiva para transformar seu perfil numa vitrine que gera desejo e vendas constantes.
+                                </div>
+                            </div>
                         </div>
-                        <div class="mb-4">
-                            <label class="form-label fw-bold">Serviço desejado:</label>
-                            <input type="text" class="form-control" name="Desafio" required>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q3">
+                                    Preciso de um site para começar a vender online?
+                                </button>
+                            </h2>
+                            <div id="q3" class="accordion-collapse collapse" data-bs-parent="#faqArroba">
+                                <div class="accordion-body">
+                                    Não é obrigatório, mas altamente recomendado. Podemos começar enviando os clientes para o seu WhatsApp, mas uma <strong>Landing Page</strong> aumenta drasticamente a confiança e a taxa de conversão do seu negócio.
+                                </div>
+                            </div>
                         </div>
-                        <button type="submit" class="btn btn-lg btn-arroba w-100">QUERO A ANÁLISE DO ESTRATEGISTA 🚀</button>
-                    </form>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q4">
+                                    Em quanto tempo vejo os primeiros resultados?
+                                </button>
+                            </h2>
+                            <div id="q4" class="accordion-collapse collapse" data-bs-parent="#faqArroba">
+                                <div class="accordion-body">
+                                    Campanhas de tráfego podem gerar contatos no <strong>primeiro dia</strong>. Já a gestão de autoridade e mídias sociais é um processo de construção de valor que amadurece a cada semana de trabalho.
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed fw-bold" type="button" data-bs-toggle="collapse" data-bs-target="#q5">
+                                    Vocês atendem em qualquer lugar do Brasil?
+                                </button>
+                            </h2>
+                            <div id="q5" class="accordion-collapse collapse" data-bs-parent="#faqArroba">
+                                <div class="accordion-body">
+                                    Sim! Somos uma agência 100% digital. Atendemos clientes em todo o país através de reuniões online e suporte via WhatsApp em tempo real.
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
 
-    <footer class="py-4 mt-5" style="background-color: var(--cor-primaria); color: var(--cor-secundaria);">
-        <div class="container text-center">
-            <small>&copy; 2026 ARROBA Soluções Digitais.</small>
+    <footer class="py-5 bg-black text-white text-center">
+        <div class="container">
+            <img src="logo.png" alt="Arroba" class="mb-4" style="max-height: 40px; filter: brightness(2);">
+            <p class="small opacity-50">&copy; 2026 ARROBA Soluções Digitais.</p>
         </div>
     </footer>
 
     <div class="whatsapp-container">
-        <a href="https://wa.me/553172266117?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20diagnóstico." 
-           class="whatsapp-float" 
-           target="_blank">
+        <a href="https://wa.me/553172266117?text=Olá!%20Vim%20pelo%20site%20e%20gostaria%20de%20um%20diagnóstico." class="whatsapp-float" target="_blank">
             <i class="fab fa-whatsapp"></i>
             <span class="whatsapp-badge">1</span>
         </a>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-
 </body>
 </html>
